@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leaderboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Локальные рекорды -->
+        <TextView
+            android:id="@+id/tvLocalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Локальные рекорды"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLocal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F2EDFF"
+            android:padding="4dp"
+            android:clipToPadding="false" />
+
+        <!-- Кнопка загрузки -->
+        <Button
+            android:id="@+id/btnLoadTop5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Загрузить ТОП-5 мировых рекордов"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Мировые рекорды -->
+        <TextView
+            android:id="@+id/tvRemoteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мировые рекорды"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRemote"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F2EDFF"
+            android:padding="4dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+</ScrollView>
